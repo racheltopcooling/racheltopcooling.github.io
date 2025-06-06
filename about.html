@@ -38,14 +38,27 @@
         h1 { 
             color: #00395d;
         }
+        .image-container {
+            position: relative; /* Needed to position the banner text */
+        }
         img {
             width: 400px; /* Set a fixed width */
             height: 300px; /* Set a fixed height */
             border-radius: 8px;
-            margin-left: 20px; /* Space between text and image */
+        }
+        .banner {
+            position: absolute; /* Position the text absolutely within the container */
+            bottom: 10px; /* Position it near the bottom of the image */
+            left: 10px; /* Position it from the left */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: #fff; /* White text color */
+            padding: 10px; /* Add some padding */
+            border-radius: 5px; /* Slightly rounded corners */
+            font-weight: bold; /* Bold text */
         }
         .text-container {
             flex: 1; /* Allow the text container to take remaining space */
+            padding-right: 20px; /* Space between text container and image */
         }
     </style>
 </head>
@@ -62,11 +75,13 @@
     <main>
         <div class="text-container">
             <h1>About Us</h1>
-            <p>We strive to exceed your expectations.</p>
             <p>Top Cooling HVAC is a reputable HVAC company with years of experience serving our valued clients. Established in 2014, we have continuously evolved and adapted to the changing heating and cooling industry while consistently staying ahead of the competition.</p>
             <p>Our commitment to quality and customer satisfaction drives us to deliver unparalleled HVAC solutions tailored to your specific needs.</p>
         </div>
-        <img src="Screenshot 2025-06-06 173649.png" alt="Banner">
+        <div class="image-container">
+            <img src="Screenshot 2025-06-06 173649.png" alt="Banner">
+            <div class="banner">We strive to exceed your expectations.</div>
+        </div>
     </main>
 
 </body>
