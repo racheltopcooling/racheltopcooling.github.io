@@ -32,9 +32,39 @@
             background: #fff; 
             border-radius: 8px; 
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            display: flex; /* Flex container for layout */
         }
         h1 { 
             color: #00395d;
+        }
+        .image-container {
+            position: relative; /* Needed for positioning the banner */
+            margin-right: 20px; /* Space between the image and text */
+        }
+        img {
+            width: 300px; /* Set a fixed width for the image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 8px; /* Rounded corners for the image */
+        }
+        .banner {
+            position: absolute; /* Position the text absolutely within the container */
+            top: 10px; /* Position it near the top of the image */
+            left: 0; /* Align it to the left */
+            right: 0; /* Fill it out to the right edge */
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            color: #fff; /* White text color */
+            padding: 10px; /* Add some padding */
+            text-align: center; /* Center the text */
+            border-radius: 5px; /* Slightly rounded corners */
+            font-weight: bold; /* Bold text */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s; /* Smooth transition */
+        }
+        .image-container:hover .banner {
+            opacity: 1; /* Show the banner on hover */
+        }
+        .text-container {
+            flex: 1; /* Allow the text container to take remaining space */
         }
     </style>
 </head>
@@ -49,9 +79,15 @@
     </nav>
 
     <main>
-        <h1>Our Blog</h1>
-        <p>Welcome to our Blog! Here, we share valuable tips, insightful updates, and industry news designed to keep you informed about HVAC systems and best practices. Whether you're a homeowner looking for maintenance tips or a business seeking energy-efficient solutions, our blog is your go-to resource.</p>
-        <p>Stay tuned for more posts! We’re excited to share knowledge and help you make the best decisions for your HVAC needs.</p>
+        <div class="image-container">
+            <img src="blog image.jpg" alt="Blog Image">
+            <div class="banner">Your Portal to Information and Knowledge</div>
+        </div>
+        <div class="text-container">
+            <h1>Our Blog</h1>
+            <p>Welcome to our Blog! Here, we share valuable tips, insightful updates, and industry news designed to keep you informed about HVAC systems and best practices. Whether you're a homeowner looking for maintenance tips or a business seeking energy-efficient solutions, our blog is your go-to resource.</p>
+            <p>Stay tuned for more posts! We’re excited to share knowledge and help you make the best decisions for your HVAC needs.</p>
+        </div>
     </main>
 
 </body>
