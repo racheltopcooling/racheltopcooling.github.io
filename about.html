@@ -57,6 +57,11 @@
             text-align: center; /* Center the text */
             border-radius: 5px; /* Slightly rounded corners */
             font-weight: bold; /* Bold text */
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.3s; /* Smooth transition */
+        }
+        .image-container:hover .banner {
+            opacity: 1; /* Show the banner on hover */
         }
         .text-container {
             flex: 1; /* Allow the text container to take remaining space */
