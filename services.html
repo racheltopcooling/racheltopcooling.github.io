@@ -17,7 +17,7 @@
             text-align: center; 
         }
         nav a { 
-            margin: 0 10px; 
+            margin: 0 15px; 
             text-decoration: none; 
             color: #fff; 
             font-weight: bold; 
@@ -26,7 +26,7 @@
             color: #ffcb05; 
         }
         main { 
-            padding: 20px; 
+            padding: 40px; 
             max-width: 800px; 
             margin: auto; 
             background: #fff; 
@@ -36,16 +36,10 @@
         h1 { 
             color: #00395d;
         }
-
-        @media (max-width: 600px) {
-            nav a {
-                display: block;
-                margin: 10px 0; 
-            }
-        }
     </style>
 </head>
 <body>
+
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
@@ -56,12 +50,21 @@
 
     <main>
         <h1>Our Services</h1>
-        <p>We provide a range of HVAC services, including installation, maintenance, and repair of heating and cooling systems.</p>
-        <ul>
-            <li>Installation of HVAC systems</li>
-            <li>Routine Maintenance and Inspections</li>
-            <li>Emergency Repairs</li>
-        </ul>
+        <p>Proudly serving the New York City and Tri-State area, our team is trained to cater to the unique requirements of each client. From installation to maintenance and emergency repairs, we offer a comprehensive range of services designed to keep your space comfortably warm in the winter and refreshingly cool in the summer.</p>
+        <p>Contact us today to learn more about how we can enhance your indoor climate and elevate your comfort year-round!</p>
+  <button id="infoButton">Learn More About Our Services</button>
+        <p id="info" style="display:none;">We offer top-notch installation and repair services for all your HVAC needs!</p>
     </main>
+
+    <script>
+        document.getElementById("infoButton").onclick = function() {
+            var info = document.getElementById("info");
+            if (info.style.display === "none") {
+                info.style.display = "block";
+            } else {
+                info.style.display = "none";
+            }
+        };
+    </script>
 </body>
 </html>
